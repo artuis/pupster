@@ -10,19 +10,21 @@ function NavTabs() {
   return (
     <ul className="nav nav-tabs">
       <li className="navbar-brand">
-        Pupster
+        <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+          Pupster
+        </Link>
       </li>
       <li className="nav-item">
-        <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-          Home
+        <Link to="/" className={location.pathname === "/about" ? "nav-link active" : "nav-link"}>
+          About
         </Link>
       </li>
       <li className="nav-item">
         <Link
           to="/about"
-          className={location.pathname === "/about" ? "nav-link active" : "nav-link"}
+          className={location.pathname === "/blog" ? "nav-link active" : "nav-link"}
         >
-          About
+          Discover
         </Link>
       </li>
       <li className="nav-item">
@@ -30,7 +32,7 @@ function NavTabs() {
           to="/blog"
           className={location.pathname === "/blog" ? "nav-link active" : "nav-link"}
         >
-          Blog
+          Search
         </Link>
       </li>
     </ul>
